@@ -3,15 +3,15 @@
 #include<string.h>
 
 int FindRoot(int M, int N) {
-if (N == 0) {return -1;}
+if (N == 0 || N == 1 || N > MAXN) {return -1;}
+if (M == 0 || M > MAXM) {return -1;}
 float answer = pow(M,1./N);
-int truncated = (int)answer;
-if(answer == truncated) {
-return answer;
+int isInt = (int)answer;
+if(answer == isInt) {
+return isInt;
 }
 else {
 return -1;
-}
 }
 
 
